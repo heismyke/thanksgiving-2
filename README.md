@@ -15,11 +15,15 @@ Site 2 of 2: a small **store with several products** for Thanksgiving shopping.
 
 ## Concept
 
-- **Brand name:** _TBD_
-- **Product category:** _TBD (e.g. home & table decor, food gift boxes, fashion)_
-- **Main offer:** _TBD (e.g. "Up to -50% Thanksgiving week")_
-- **Target customer:** _TBD_
-- **Mood / palette:** _TBD, must look different from Site 1_
+- **Brand name:** Maison Merci
+- **Product category:** Thanksgiving table and home: linen, wood, stoneware, candles, spices, gift boxes (8 products, 4 categories)
+- **Main offer:** Thanksgiving week, up to -35 %, free delivery from 30 000 FCFA, "Merci" gift box as the hero bundle
+- **Target customer:** people in Benin dressing a festive table or buying a thank-you gift
+- **Mood / palette:** minimal, off-white `#fafaf7`, ink `#141414`, olive `#4f5b3a`
+- **Font:** DM Sans only, self-hosted
+- **Language:** French
+- **Images:** AI-generated, see [IMAGES.md](IMAGES.md) for the prompts and file names
+- **Content:** products, prices and reviews live in `src/data/products.js`
 
 ## Pages
 
@@ -30,6 +34,7 @@ Site 2 of 2: a small **store with several products** for Thanksgiving shopping.
 | **Product** | Gallery, price, stock urgency, reviews, "Add to cart", related products |
 | **Cart** | Items, upsell ("add X for free shipping"), total, checkout button |
 | **Checkout** | Short form, payment logos, trust badges (demo only) |
+| **Confirmation** | Order number, summary, "Confirm on WhatsApp" button |
 
 ## Conversion checklist
 

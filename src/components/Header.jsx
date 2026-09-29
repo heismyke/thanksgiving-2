@@ -1,3 +1,24 @@
+import { Link } from 'react-router'
+import { useCart } from '../context/cart.js'
+import { brand } from '../data/products.js'
+
 export default function Header() {
-  return <header className="header">Header</header>
+  const { count, openDrawer } = useCart()
+
+  return (
+    <header className="header">
+      <div className="container header__inner">
+        <Link to="/" className="logo">{brand}</Link>
+        <nav className="header__nav" aria-label="Navigation principale">
+          <Link to="/shop">Boutique</Link>
+          <Link to="/shop?cat=Table">Table</Link>
+          <Link to="/shop?cat=Coffrets">Coffrets</Link>
+        </nav>
+        <button type="button" className="cart-btn" onClick={openDrawer} aria-label={`Panier, ${count} article(s)`}>
+          Panier
+          <span className="cart-btn__count">{count}</span>
+        </button>
+      </div>
+    </header>
+  )
 }
