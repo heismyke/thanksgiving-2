@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import { CartProvider } from './context/CartContext.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import AnnouncementBar from './components/AnnouncementBar.jsx'
+import useMotion from './hooks/useMotion.js'
 import Header from './components/Header.jsx'
 import CartDrawer from './components/CartDrawer.jsx'
 import Footer from './components/Footer.jsx'
@@ -13,6 +14,7 @@ import Checkout from './pages/Checkout.jsx'
 import Confirmation from './pages/Confirmation.jsx'
 
 export default function App() {
+  useMotion()
   return (
     <CartProvider>
       <BrowserRouter>

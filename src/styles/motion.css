@@ -1,0 +1,58 @@
+/* Shared motion language: short interactions and a gentle editorial reveal. */
+:root { --motion-ease: cubic-bezier(0.22, 1, 0.36, 1); }
+html { scroll-padding-top: 88px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .btn, .card__add, .chip, .cart-btn, .icon-btn, .modal__close {
+    transition: transform 240ms var(--motion-ease), box-shadow 240ms ease,
+      background-color 240ms ease, color 240ms ease, border-color 240ms ease;
+  }
+  .img-frame img { transition: transform 800ms var(--motion-ease); }
+  .review { transition: box-shadow 300ms ease, transform 300ms var(--motion-ease); }
+  .header__nav a { position: relative; }
+  .header__nav a::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: -5px;
+    height: 1px; background: currentColor; transform: scaleX(0);
+    transform-origin: left; transition: transform 280ms var(--motion-ease);
+  }
+  .header__nav a:is(:hover, :focus-visible)::after { transform: scaleX(1); }
+  .btn:active, .card__add:active, .chip:active, .cart-btn:active { transform: scale(0.97); }
+  .field input, .field select, .payment { transition: border-color 220ms ease, box-shadow 220ms ease; }
+  .field input:focus, .field select:focus { box-shadow: 0 0 0 3px var(--color-line); }
+  .drawer { animation: fade 300ms ease; }
+  .drawer__panel { animation: slide 450ms var(--motion-ease); }
+  .modal { animation: fade 280ms ease; }
+  .modal__panel { animation: motion-panel 420ms var(--motion-ease); }
+  .sticky-buy { animation: motion-rise 500ms var(--motion-ease); }
+  .faq details[open] p { animation: motion-rise 320ms var(--motion-ease); }
+  .faq summary::after { transition: transform 280ms var(--motion-ease); }
+  .ship__bar span { transition: width 500ms var(--motion-ease); }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .btn:hover, .card__add:hover, .cart-btn:hover {
+    transform: translateY(-3px); box-shadow: 0 8px 20px -12px var(--color-text);
+  }
+  .btn:active, .card__add:active, .cart-btn:active { transform: scale(0.97); }
+  .chip:hover { transform: translateY(-2px); }
+  .review:hover { transform: translateY(-4px); box-shadow: 0 16px 32px -24px var(--color-text); }
+  .hero__image:hover img, .details__gallery .img-frame:hover img,
+  .cat:hover img, .card__media:hover img { transform: scale(1.035); }
+}
+
+@keyframes motion-panel {
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes motion-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .btn:hover, .cat:hover img, .card__media:hover img { transform: none; }
+}
+
