@@ -1,6 +1,8 @@
 # Images for Maison Merci (Site 2)
 
-Generate these with any AI image tool (ChatGPT, Gemini, Midjourney…), then:
+The hero and all eight product photos are now included as compressed WebP files (each under 200 KB), generated with the built-in image generation tool. Exact prompts are recorded in [IMAGE-PROMPTS.md](IMAGE-PROMPTS.md).
+
+To replace or regenerate them:
 
 1. Convert to **WebP** and compress to **under 200 KB** each (squoosh.app or tinypng.com).
 2. Save them with the **exact file name** below: the hero in `public/images/`, the products in `public/images/products/`.
