@@ -97,3 +97,5 @@ Netlify → *Add new site* → *Import from GitHub* → `team-q4-calibrage/thank
 - Keep this repo **private**; share the live link only in the team group.
 - Commit and push often (commit times prove the work is ours).
 - No password on the live site: the organizers must be able to open it.
+
+# thanksgiving-2
